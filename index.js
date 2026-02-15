@@ -11,12 +11,14 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyparser.urlencoded({extended: true}))
 const PORT = process.env.PORT || 3000
+console.log("salom");
+
+
 
 app.use(todoRouter)
 app.use(registerRouter)
-console.log("Server")
 app.use(superAdminRoute)
 
 app.listen(PORT, () => {
-    console.log(PORT);
+    console.log("Server is running: " + PORT);
 })
